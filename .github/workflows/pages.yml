@@ -30,7 +30,7 @@ jobs:
       with:
         personal_token: ${{ secrets.ACTIONS_DEPLOY_KEY }}
         external_repository: EmilienM/EmilienM.github.io
-        publish_branch: main
+        publish_branch: gh-pages
         publish_dir: ./public
         user_name: EmilienM
         user_email: emacchi@pm.me
