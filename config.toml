@@ -2,7 +2,7 @@
 baseURL = 'https://emilienm.github.io/'
 languageCode = 'en-us'
 defaultContentLanguage = 'en'
-title = "Webcome to Emilien's page"
+title = "/home/emilien"
 defaultContentLanguageInSubdir = true
 
 [languages]
