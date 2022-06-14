@@ -1,0 +1,32 @@
+theme = "hyde"
+baseURL = 'https://emilienm.github.io/'
+languageCode = 'en-us'
+defaultContentLanguage = 'en'
+title = "Webcome to Emilien's page"
+defaultContentLanguageInSubdir = true
+
+[languages]
+  [languages.en]
+    languageName = "English"
+    weight = 1
+
+[Menus]
+  main = [
+      {Name = "Github", URL = "https://github.com/EmilienM/"}
+  ]
+
+  [params]
+    description = "Technical randomness"
+
+enableGitInfo = true
+
+[frontmatter]
+  date = ['date', 'publishDate', 'lastmod']
+  expiryDate = ['expiryDate']
+  lastmod = [':git', 'lastmod', 'date', 'publishDate']
+  publishDate = ['publishDate', 'date']
+
+[taxonomies]
+  category = 'categories'
+  series = 'series'
+  tag = 'tags'  
