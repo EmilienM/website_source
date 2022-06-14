@@ -1,4 +1,4 @@
-theme = "hyde"
+theme = "fuji"
 baseURL = 'https://emilienm.github.io/'
 languageCode = 'en-us'
 defaultContentLanguage = 'en'
