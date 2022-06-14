@@ -1,5 +1,5 @@
-baseURL = "https://emilienm.github.io"
-title = "/home/emilien"
+baseURL = "https://emilienm.github.io/"
+title = "Hugo Theme Fuji"
 
 theme = "fuji"
 hasCJKLanguage = true
@@ -31,33 +31,63 @@ home = ["HTML", "RSS", "SearchIndex"]
 post = "/:section/:filename/" # Custom post links, e.g. "/:year/:month/:title/"
 
 [params]
-author = "Emilien Macchi"
-subTitle = "/home/emilien"
-defaultTheme = "dark"
+author = "DSRKafuU"                # You can also set author in post front matter individually
+subTitle = "A minimal Hugo theme."
+defaultTheme = "auto"              # default theme when first visit (auto|dark|light)
 
+# Source URL of the website, will appear in the footer
 sourceURL = "https://github.com/dsrkafuu/hugo-theme-fuji"
 
+# Use CloudFlare Workers to accelerate the Google Analytics
+# If you are using this please comment the googleAnalytics above
+# Check https://github.com/SukkaW/cloudflare-workers-async-google-analytics for more details
+# googleAnalyticsTid = "UA-000000000-0"
+# googleAnalyticsRoute = "https://*.*.workers.dev/"
+
+# Google AdSense
+# The AdSense code will be inserted between the head tags of your site.
+# googleAdsense = "0000000000000000"
+
+# Word counter and read time indicator in post metadata
 showWordCounter = true
 showReadTime = false
 
+# License in the footer
 showLicenseInFooter = false
 
+# License at the end of each post
 showLicense = true
 showToc = true
 
-copyrightStartYear = "2022"
+# Copyright
+copyrightStartYear = "2020"
 
 # Open Graph & Twitter Card variables
 # You can also set description and images in post front matter individually
-description = "/home/emilien"
+description = "A minimal Hugo theme with nice theme color."
 og = "/img/og.png"                                          # This will use the image called og.png in static/img folder
 
 # Posts shown in homepage
 mainSections = ["post"]
 
+# Bangumi image chart id
+# bgmImageChart = "000000"
+
 # License
 license = "CC BY-NC-SA 4.0"
 licenseLink = "http://creativecommons.org/licenses/by-nc-sa/4.0/"
+
+# Comments
+# utterances, see: https://utteranc.es/
+# utterancesRepo = "*/*"
+# utterancesIssueTerm = "pathname"
+
+# Disqus, see: https://disqus.com/admin/install/platforms/universalcode/
+# disqusShortname = "*********"
+# Also use DisqusJS for accessing from Mainland China, see: https://github.com/SukkaW/DisqusJS
+# If you want to set multiple api key, see theme's README for more details
+# disqusJSApi = "https://*********/"
+# disqusJSApikey = "**********"
 
 # custom lazyload placeholder
 # 16:9
@@ -108,12 +138,16 @@ weight = 5
 
 [[menu.link]]
 name = "GitHub"
-url = "https://github.com/EmilienM"
+url = "https://github.com/dsrkafuu"
 weight = 1
 [[menu.link]]
 name = "Twitter"
-url = "https://twitter.com/EmilienMacchi"
+url = "https://twitter.com/dsrkafuu"
 weight = 2
+[[menu.link]]
+name = "bilibili"
+url = "https://space.bilibili.com/19767474"
+weight = 3
 
 [build]
 noJSConfigInAssets = true
