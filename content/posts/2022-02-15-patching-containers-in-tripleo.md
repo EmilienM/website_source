@@ -4,7 +4,7 @@ author: Emilien
 type: post
 date: 2022-02-15T19:25:37+00:00
 url: /patching-containers-in-tripleo/
-featured_image: /static/surgery-tools.jpg
+featured_image: /static/images/surgery-tools.jpg
 categories:
   - tripleo
   - openstack

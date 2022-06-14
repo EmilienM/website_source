@@ -1,8 +1,8 @@
 baseURL = "https://emilienm.github.io/"
-title = "/home/emilien"
-theme = "anatole"
 languageCode = "en"
 DefaultContentLanguage = "en"
+title = "/home/emilien"
+theme = "anatole"
 
 summarylength = 10
 enableEmoji = true
