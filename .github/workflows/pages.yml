@@ -28,7 +28,7 @@ jobs:
       - name: Build Site
         run: hugo
 
-      - name: Upload Data
+      - name: Upload search data
         working-directory: ./algolia
         run: |
           npm install
@@ -37,12 +37,13 @@ jobs:
             -a PKAF510SVG \
             -k ${{ secrets.ALGOLIA_ADMIN_API_KEY }} \
             -n emilien_website 
-- name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          personal_token: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-          external_repository: EmilienM/EmilienM.github.io
-          publish_branch: main
-          publish_dir: ./public
-          user_name: EmilienM
-          user_email: emacchi@pm.me
+
+      - name: Deploy the website
+              uses: peaceiris/actions-gh-pages@v3
+              with:
+                personal_token: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+                external_repository: EmilienM/EmilienM.github.io
+                publish_branch: main
+                publish_dir: ./public
+                user_name: EmilienM
+                user_email: emacchi@pm.me
