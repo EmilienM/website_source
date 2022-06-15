@@ -8,6 +8,7 @@ featured_image: /static/images/surgery-tools.jpg
 categories:
   - openstack
   - containers
+  - buildah
   - tripleo
 
 ---
