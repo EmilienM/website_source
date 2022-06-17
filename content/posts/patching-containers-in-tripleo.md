@@ -1,16 +1,15 @@
 ---
 title: Patching containers in TripleO
-author: Emilien
-type: post
-date: 2022-02-15T19:25:37+00:00
+date: 2022-02-15
 url: /blog/patching-containers-in-tripleo/
-featured_image: /static/images/surgery-tools.jpg
 categories:
   - openstack
   - containers
   - buildah
   - tripleo
-
+summary: Learn how to patch TripleO containers
+weight: 1
+aliases: ["/papermod-installation"]
 ---
 Read this post to learn more how to update a container in TripleO on a live system.
 
@@ -52,7 +51,7 @@ openstack tripleo container image hotfix \
     --rpms-path /tmp/hotfix \
     --tag 16.2-customfix \
 ```
- 
+ 
 
 You should see the new image by running **buildah images**.
 
@@ -102,4 +101,4 @@ Your container is now running with your custom image (check with **podman inspec
 
 For more details or help, check out the TripleO manuals or ask for help on IRC #tripleo (OFTC now).
 
- [1]: https://docs.openstack.org/project-deploy-guide/tripleo-docs/latest/deployment/container_image_prepare.html#building-hotfixed-containers
+[1]: https://docs.openstack.org/project-deploy-guide/tripleo-docs/latest/deployment/container_image_prepare.html#building-hotfixed-containers
