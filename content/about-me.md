@@ -26,6 +26,9 @@ Passed CCNA and Microsoft Windows 2008 Server Administration Certifications.
 ### Distant Teaching (2009 to 2011)
 BTS : 2 year diploma course in Network Senior Technician.
 
+### Military school (2004 to 2007)
+Military High School, mixing military training and also a "BAC" in Electronics,
+and then some training on networks & systems.
 
 ## Experience
 
@@ -36,7 +39,7 @@ BTS : 2 year diploma course in Network Senior Technician.
 ### StackOps Technologies - R&D Engineering Internship - 4 months (2012)
 OpenStack Engineering with focus on networking (Neutron) and deployments.
 
-### French Air Force - Network & System Administrator - 4 years (2007 - 2011)i
+### French Air Force - Network & System Administrator - 4 years (2007 - 2011)
 Deploy military networks in International Environment - system & network admin.
 No details can be given.
 
