@@ -1,54 +1,49 @@
 ---
 title: "About me"
-date: "2022-061605"
+date: "2022-071105"
 hidemeta: true
+showtoc: false
 cover:
   image: em.png
 ---
 
-I always say "I had two lifes":
-- one in the military
-- the other one
+To know more about my career path, you can go on my updated [Linkedin profile](https://www.linkedin.com/in/emilienmacchi).
+I'm also on [Twitter](https://twitter.com/EmilienMacchi) but don't use it much and I'm not posting much on social medias in general.
 
+Here is a form if you want to contact me:
 
-## Education
-
-### Orizon Aviation, Quebec (2016)
-Private Pilot License (PPL), VFR, mainly flying C172.
-
-### IngeSup, Paris (2012 to 2014)
-Engineer Degree in Network & System Engineering.
-
-### Vocational Bachelor, Nice Sophia-Antipolis (2011 to 2012)
-Graduated with highest honor in Network & System Engineering.
-Passed CCNA and Microsoft Windows 2008 Server Administration Certifications.
-
-### Distant Teaching (2009 to 2011)
-BTS : 2 year diploma course in Network Senior Technician.
-
-### Military school (2004 to 2007)
-Military High School, mixing military training and also a "BAC" in Electronics,
-and then some training on networks & systems.
-
-## Experience
-
-### Red Hat (ex-eNovance) - Software Engineering (2012 - now)
-- Build & Deploy OpenStack faster than light.
-- Integrate Kubernetes and OpenStack together.
-
-### StackOps Technologies - R&D Engineering Internship - 4 months (2012)
-OpenStack Engineering with focus on networking (Neutron) and deployments.
-
-### French Air Force - Network & System Administrator - 4 years (2007 - 2011)
-Deploy military networks in International Environment - system & network admin.
-No details can be given.
-
-### Freelancing - 2 years (2011 - 2012)
-Frontend Developper & Technical Writer for LinuxIdentity Magazine.
-
-
-## About me
-Self-educated, Curious, Creativeness, Open-mind
-
-# Stay in touch
-The best way to reach out is via email: my_first_name>@my_last_name>.pro
+<form method="post" action="https://forms.un-static.com/forms/8edf937f7b54283716608e552aff9e5990772001">
+  <div class="form-group row">
+    <label for="name" class="col-4 col-form-label">Name</label>
+    <div class="col-8">
+      <div class="input-group">
+        <div class="input-group-addon">
+          <i class="fa fa-user"></i>
+        </div>
+        <input id="name" name="name" placeholder="Please enter your name" type="text" required="required" class="form-control">
+      </div>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="email" class="col-4 col-form-label">E-mail address</label>
+    <div class="col-8">
+      <div class="input-group">
+        <div class="input-group-addon">
+          <i class="fa fa-envelope"></i>
+        </div>
+        <input id="email" name="email" placeholder="Your e-mail address" type="text" required="required" class="form-control">
+      </div>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="message" class="col-4 col-form-label">Message</label>
+    <div class="col-8">
+      <textarea id="message" name="message" cols="40" rows="10" required="required" class="form-control"></textarea>
+    </div>
+  </div>
+  <div class="form-group row">
+    <div class="offset-4 col-8">
+      <button name="submit" type="submit" class="btn btn-primary">Send</button>
+    </div>
+  </div>
+</form>
