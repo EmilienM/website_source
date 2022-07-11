@@ -9,7 +9,6 @@ categories:
   - tripleo
 summary: Learn how to patch TripleO containers
 weight: 1
-aliases: ["/papermod-installation"]
 cover:
   image: "surgery-tools.jpg"
 ---
