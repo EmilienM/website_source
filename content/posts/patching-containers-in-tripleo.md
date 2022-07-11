@@ -8,7 +8,6 @@ categories:
   - buildah
   - tripleo
 summary: Learn how to patch TripleO containers
-weight: 1
 cover:
   image: "surgery-tools.jpg"
 ---
