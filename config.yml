@@ -83,6 +83,8 @@ params:
       url: "https://twitter.com/EmilienMacchi"
     - name: github
       url: "https://github.com/EmilienM"
+    - name: linkedin
+      url: "https://www.linkedin.com/in/emilienmacchi"
 
   analytics:
     google:
