@@ -11,7 +11,7 @@ tags:
 - openstack
 - ptl
 cover:
-  image: "team.jpg"
+  image: "images/team.jpg"
 ---
 This story explains why I started to stop working as a anarchistic-multi-tasking-schedule-driven and learnt how to become a good team leader.
 

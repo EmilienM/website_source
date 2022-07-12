@@ -9,7 +9,7 @@ categories:
   - tripleo
 summary: Learn how to patch TripleO containers
 cover:
-  image: "surgery-tools.jpg"
+  image: "images/surgery-tools.jpg"
 ---
 Read this post to learn more how to update a container in TripleO on a live system.
 

@@ -9,7 +9,7 @@ categories:
 summary: A short memo on how we can move container images from the docker.io registry to quay.io.
 weight: 1
 cover:
-  image: "moving.jpg"
+  image: "images/moving.jpg"
 ---
 
 Have a look at how we can move container images from the docker.io registry to quay.io.

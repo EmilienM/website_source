@@ -7,7 +7,7 @@ categories:
 tags:
 - leadership
 cover:
-  image: "leadership.jpg"
+  image: "images/leadership.jpg"
 ---
 I finally took some time to write some thoughts about what Leadership means to me.
 
