@@ -1,7 +1,7 @@
 ---
 title: Moving container images from docker.io to quay.io
 date: 2019-09-30
-url: /blog/patching-containers-in-tripleo/
+url: /blog/moving-container-images-from-docker-io-to-quay-io/
 categories:
   - containers
   - skopeo
