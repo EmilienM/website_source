@@ -4,7 +4,7 @@ date: "2022-071105"
 hidemeta: true
 showtoc: false
 cover:
-  image: em.png
+  image: /images/em.png
 ---
 
 - My professional path is frequently updated on my [Linkedin profile](https://www.linkedin.com/in/emilienmacchi).
