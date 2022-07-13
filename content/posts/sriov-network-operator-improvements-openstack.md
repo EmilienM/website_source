@@ -2,6 +2,7 @@
 title: SR-IOV network operator improvements for OpenStack
 date: 2022-07-13
 url: /blog/sriov-network-operator-improvements-openstack/
+author: Emilien Macchi and Maysa Macedo
 categories:
   - openstack
   - containers
@@ -17,6 +18,8 @@ cover:
 Stay tuned on our recent achievements in the Kubernetes and OpenStack space when running Fast-Datapath applications.
 
 <!--more-->
+
+Authors: [Emilien Macchi](https://my1.fr) and [Maysa Macedo](https://medium.com/@maysa.macedo).
 
 In the past months, the [Kubernetes Network Plumbing Working-Group](https://github.com/k8snetworkplumbingwg) added new features to the [SR-IOV Network Operator](https://github.com/k8snetworkplumbingwg/sriov-network-operator/) for the OpenStack platform.
 
