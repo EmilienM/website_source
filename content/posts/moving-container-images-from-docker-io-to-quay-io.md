@@ -7,7 +7,6 @@ categories:
   - skopeo
   - quay
 summary: A short memo on how we can move container images from the docker.io registry to quay.io.
-weight: 1
 cover:
   image: "images/moving.jpg"
 ---
