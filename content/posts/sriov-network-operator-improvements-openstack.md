@@ -41,7 +41,7 @@ If your Kubernetes hosts have access to the Nova metadata URL, then you have not
 
 ### Enable VFIO with NOIOMMU
 
-In virtual deployments of Kubernetes where the underlying virtualization platform (e.g. [QEMU](https://www.qemu.org/)) does not support a virtualized I/O memory management unit ([IOMMU](https://en.wikipedia.org/wiki/Input%E2%80%93output_memory_management_unit)), the [VFIO](https://www.kernel.org/doc/html/latest/driver-api/vfio.html) PCI driver needs to be loaded with an option named  _enable_unsafe_noiommu_mode_ enabled. This option provides user-space I/O access to a direct memory access capable device without a IOMMU.
+In virtual deployments of Kubernetes where the underlying virtualization platform (e.g. [QEMU](https://www.qemu.org/)) does not support a virtualized I/O memory management unit ([IOMMU](https://en.wikipedia.org/wiki/Input%E2%80%93output_memory_management_unit)), the [VFIO](https://www.kernel.org/doc/html/latest/driver-api/vfio.html) PCI driver needs to be loaded with an option named  _enable_unsafe_noiommu_mode_ enabled. This option gives user-space I/O access to a device which is direct memory access capable without a IOMMU.
 
 The operator is now loading the driver with the right arguments so the users don’t have to worry about it.
 
