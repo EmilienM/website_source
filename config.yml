@@ -18,7 +18,7 @@ minify:
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
   title: /home/emilien
-  description: "Website of Emilien Macchi"
+  description: "Emilien Macchi's website"
   keywords: [Blog, OpenStack, Linux, Kubernetes, Open-source, OpenShift]
   author: Emilien Macchi
   images: ["<link or path of image for opengraph, twitter-cards>"]
