@@ -1,21 +1,15 @@
 name: Upload website data
-
-on:
-  push:
-    branches:
-      - main
+on: [push, pull_request]
 
 jobs:
   upload_data:
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Git Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           fetch-depth: 0
-
-      - name: Update theme
-        run: git submodule update --init --recursive
+          submodules: recursive
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
@@ -23,10 +17,11 @@ jobs:
           hugo-version: 'latest'
 
       - name: Build Site
-        run: hugo
+        run: hugo --minify
 
       - name: Deploy the website
         uses: peaceiris/actions-gh-pages@v3
+        if: ${{ github.ref == 'refs/heads/main' }}
         with:
           personal_token: ${{ secrets.ACTIONS_DEPLOY_KEY }}
           external_repository: EmilienM/EmilienM.github.io
