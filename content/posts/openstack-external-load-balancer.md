@@ -1,6 +1,6 @@
 ---
 title: Deploying OpenShift with an External Load-Balancer for your control plane
-date: 2022-02-17
+date: 2023-02-17
 url: /blog/openshift-external-load-balancer-control-plane-intro
 author: Emilien Macchi
 categories:
