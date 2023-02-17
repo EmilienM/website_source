@@ -31,7 +31,7 @@ A single stretched L2 network brings challenges:
 * L2 domain failures
 * Network management complexity
 
-![Stretched architecture](images/stretched.png)
+![Stretched architecture](/images/stretched.png)
 
 Smaller (L3 routed) networks however has these benefits:
 * Optimize East-West traffic
@@ -40,7 +40,7 @@ Smaller (L3 routed) networks however has these benefits:
 * Failure domain isolated to a network
 * Non blocking network fabric
 
-![Spine & Leaf](images/spineleaf.png)
+![Spine & Leaf](/images/spineleaf.png)
 
 ### OpenShift Managed Load-Balancer
 
@@ -77,7 +77,7 @@ For that, I've decided to create an Ansible role named [ansible-role-routed-lb](
 
 This will deploy an advanced Load-Balancer capable of managing routed VIPs with FRR (using BGP) and load-balance traffic with HAproxy.
 
-![Zoom into the LB](images/zoom-lb.png)
+![Zoom into the LB](/images/zoom-lb.png)
 
 The role will do the following:
 * If BGP neighbors are provided in the config, it'll deploy FRR and peer with your BGP neighbor(s).
@@ -96,7 +96,7 @@ Let's deploy it!
 
 In our advanced example, we'll deploy 2 LBs (for HA) per leaf, which is in its own routed network.
 
-![Example of advanced scenario](images/example-lb.png)
+![Example of advanced scenario](/images/example-lb.png)
 
 Create your Ansible `inventory.yaml` file:
 ```yaml
