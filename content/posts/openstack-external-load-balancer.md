@@ -104,17 +104,17 @@ Create your Ansible `inventory.yaml` file:
 all:
   hosts:
     lb1-1:
-      ansible_host: 192.168.11.1
-    lb1-2:
       ansible_host: 192.168.11.2
+    lb1-2:
+      ansible_host: 192.168.11.3
     lb2-1:
-      ansible_host: 192.168.12.1
-    lb2-2:
       ansible_host: 192.168.12.2
+    lb2-2:
+      ansible_host: 192.168.12.3
     lb3-1:
-      ansible_host: 192.168.13.1
-    lb3-2:
       ansible_host: 192.168.13.2
+    lb3-2:
+      ansible_host: 192.168.13.3
   children:
     lb1:
       hosts:
@@ -154,6 +154,10 @@ Write the LB configs in Ansible `vars.yaml`:
 ---
 configs:
   lb1:
+    bgp_asn: 64998
+    bgp_neighbors:
+      - ip: 192.168.11.1
+        password: f00barZ
     services:
       - name: api
         vips:
@@ -215,7 +219,7 @@ configs:
 	  - name: master-1
 	    ip: 192.168.11.10
 
-<repeat it for lb2 and lb3 and put the right backend_hosts IPs>
+<repeat it for lb2 and lb3 and put the right BGP and backend hosts IPs>
 ```
 
 Install the role and the dependencies:
