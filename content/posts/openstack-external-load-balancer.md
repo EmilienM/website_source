@@ -162,7 +162,6 @@ configs:
       - name: api
         vips:
 	  - 192.168.100.240
-	  - 192.168.100.250
         min_backends: 1
         healthcheck: "httpchk GET /readyz HTTP/1.0"
         balance: roundrobin
@@ -175,7 +174,6 @@ configs:
 	    ip: 192.168.11.10
       - name: ingress_http
         vips:
-	  - 192.168.100.240
 	  - 192.168.100.250
         min_backends: 1
         healthcheck: "httpchk GET /healthz/ready HTTP/1.0"
@@ -191,7 +189,6 @@ configs:
 	    ip: 192.168.11.12
       - name: ingress_https
         vips:
-	  - 192.168.100.240
 	  - 192.168.100.250
         min_backends: 1
         healthcheck: "httpchk GET /healthz/ready HTTP/1.0"
@@ -208,7 +205,6 @@ configs:
       - name: machine-config-server
         vips:
 	  - 192.168.100.240
-	  - 192.168.100.250
         min_backends: 1
         balance: roundrobin
         frontend_port: 22623
