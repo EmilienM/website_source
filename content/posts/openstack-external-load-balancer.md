@@ -167,7 +167,7 @@ configs:
         balance: roundrobin
         frontend_port: 6443
         haproxy_monitor_port: 8081
-        backend_opts: "check check-ssl inter 1s fall 2 rise 3 verify none backup"
+        backend_opts: "check check-ssl inter 1s fall 2 rise 3 verify none"
         backend_port: 6443
         backend_hosts:
 	  - name: master-1
@@ -209,7 +209,7 @@ configs:
         balance: roundrobin
         frontend_port: 22623
         haproxy_monitor_port: 8084
-        backend_opts: "check check-ssl inter 5s fall 2 rise 3 verify none backup"
+        backend_opts: "check check-ssl inter 5s fall 2 rise 3 verify none"
         backend_port: 22623
         backend_hosts:
 	  - name: master-1
