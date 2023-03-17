@@ -94,55 +94,28 @@ So if you're hosting multiple Load-Balancers, your OpenShift control plane traff
 
 Let's deploy it!
 
-In our advanced example, we'll deploy 2 LBs (for HA) per leaf, which is in its own routed network.
+In our example, we'll deploy one LB per leaf, which is in its own routed network.
+In this blog post, we won't cover the Failure Domains yet, and will deploy OpenShift within a single Leaf.
+Therefore, we'll deploy only one load balancer.
 
-![Example of advanced scenario](/images/example-lb.png)
 
 Create your Ansible `inventory.yaml` file:
 ```yaml
 ---
 all:
   hosts:
-    lb1-1:
+    lb:
       ansible_host: 192.168.11.2
-    lb1-2:
-      ansible_host: 192.168.11.3
-    lb2-1:
-      ansible_host: 192.168.12.2
-    lb2-2:
-      ansible_host: 192.168.12.3
-    lb3-1:
-      ansible_host: 192.168.13.2
-    lb3-2:
-      ansible_host: 192.168.13.3
-  children:
-    lb1:
-      hosts:
-        lb1-1:
-	lb1-2:
-      vars:
-        config: lb1
-    lb2:
-      hosts:
-        lb2-1:
-	lb2-2:
-      vars:
-        config: lb2
-    lb3:
-      hosts:
-        lb3-1:
-	lb3-2:
-      vars:
-        config: lb3
+      ansible_user: cloud-user
+      ansible_become: true
 ```
 
 Create the Ansible `playbook.yaml` file:
 ```yaml
 ---
-- hosts:
-    - lb1
-    - lb2
-    - lb3
+- hosts: lb
+  vars:
+    config: lb
   tasks:
     - name: Deploy the LBs
       include_role:
@@ -153,7 +126,7 @@ Write the LB configs in Ansible `vars.yaml`:
 ```yaml
 ---
 configs:
-  lb1:
+  lb:
     bgp_asn: 64998
     bgp_neighbors:
       - ip: 192.168.11.1
@@ -161,7 +134,7 @@ configs:
     services:
       - name: api
         vips:
-	  - 192.168.100.240
+          - 192.168.100.240
         min_backends: 1
         healthcheck: "httpchk GET /readyz HTTP/1.0"
         balance: roundrobin
@@ -169,12 +142,32 @@ configs:
         haproxy_monitor_port: 8081
         backend_opts: "check check-ssl inter 1s fall 2 rise 3 verify none"
         backend_port: 6443
-        backend_hosts:
-	  - name: master-1
-	    ip: 192.168.11.10
+        backend_hosts: &lb_hosts
+          - name: rack1-10
+            ip: 192.168.11.10
+          - name: rack1-11
+            ip: 192.168.11.11
+          - name: rack1-12
+            ip: 192.168.11.12
+          - name: rack1-13
+            ip: 192.168.11.13
+          - name: rack1-14
+            ip: 192.168.11.14
+          - name: rack1-15
+            ip: 192.168.11.15
+          - name: rack1-16
+            ip: 192.168.11.16
+          - name: rack1-17
+            ip: 192.168.11.17
+          - name: rack1-18
+            ip: 192.168.11.18
+          - name: rack1-19
+            ip: 192.168.11.19
+          - name: rack1-20
+            ip: 192.168.11.20
       - name: ingress_http
         vips:
-	  - 192.168.100.250
+          - 192.168.100.250
         min_backends: 1
         healthcheck: "httpchk GET /healthz/ready HTTP/1.0"
         frontend_port: 80
@@ -182,14 +175,10 @@ configs:
         balance: roundrobin
         backend_opts: "check check-ssl port 1936 inter 1s fall 2 rise 3 verify none"
         backend_port: 80
-        backend_hosts:
-	  - name: worker-1
-	    ip: 192.168.11.11
-	  - name: worker-2
-	    ip: 192.168.11.12
+        backend_hosts: *lb_hosts
       - name: ingress_https
         vips:
-	  - 192.168.100.250
+          - 192.168.100.250
         min_backends: 1
         healthcheck: "httpchk GET /healthz/ready HTTP/1.0"
         frontend_port: 443
@@ -197,25 +186,17 @@ configs:
         balance: roundrobin
         backend_opts: "check check-ssl port 1936 inter 1s fall 2 rise 3 verify none"
         backend_port: 443
-        backend_hosts:
-	  - name: worker-1
-	    ip: 192.168.11.11
-	  - name: worker-2
-	    ip: 192.168.11.12
-      - name: machine-config-server
+        backend_hosts: *lb_hosts
+      - name: mcs
         vips:
-	  - 192.168.100.240
+          - 192.168.100.240
         min_backends: 1
-        balance: roundrobin
         frontend_port: 22623
         haproxy_monitor_port: 8084
+        balance: roundrobin
         backend_opts: "check check-ssl inter 5s fall 2 rise 3 verify none"
         backend_port: 22623
-        backend_hosts:
-	  - name: master-1
-	    ip: 192.168.11.10
-
-<repeat it for lb2 and lb3 and put the right BGP and backend hosts IPs>
+        backend_hosts: *lb_hosts
 ```
 
 Install the role and the dependencies:
@@ -257,8 +238,6 @@ networking:
     hostPrefix: 23
   machineNetwork:
   - cidr: 192.168.11.0/24
-  - cidr: 192.168.12.0/24
-  - cidr: 192.168.13.0/24
   - cidr: 192.168.100.0/24
 platform:
   openstack:
