@@ -275,6 +275,9 @@ platform:
 featureSet: TechPreviewNoUpgrade
 ```
 
+After the deployment, you'll only have one worker in the first domain. To deploy more workers in other domains, you'll
+have to create a MachineSet per domain (the procedure is well documented in OpenShift already).
+
 Note that for each Failure Domain, you have to provide the leaf network ID and its subnet ID as well.
 If you deploy with availability zones, you'll be able to provide them in each domain. The documentation
 for this feature is in progress and I'll update this post once we have it published.
@@ -298,5 +301,7 @@ not only on the control plane but also for the workloads.
 
 We have already got positive feedback from various teams, who tested it at a large scale and demonstrated that in this scenario, OpenShift is more reliable,
 better load-balanced and distributed in case of failure.
+
+In a future post, I want to cover how you can make your workloads more reliable by using [MetalLB](https://metallb.universe.tf/) as a load balancer in BGP mode.
 
 I hope you liked it and please provide any feedback on the channels.
