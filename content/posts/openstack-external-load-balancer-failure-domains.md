@@ -12,7 +12,7 @@ cover:
   image: "images/example-lb.png"
 ---
 
-This is my second post of a series which will cover how can you distribute your OpenShift cluster across multiple datacenter domains and increase
+This is my second post of a series which will cover how you can distribute your OpenShift cluster across multiple datacenter domains and increase
 availability and performance of your control plane.
 
 <!--more-->
