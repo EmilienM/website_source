@@ -110,6 +110,8 @@ all:
       ansible_become: true
 ```
 
+`192.168.11.2` is the IP address of the load balancer.
+
 Create the Ansible `playbook.yaml` file:
 ```yaml
 ---
@@ -198,6 +200,9 @@ configs:
         backend_port: 22623
         backend_hosts: *lb_hosts
 ```
+
+In this case, we deploy OpenShift on OpenStack which doesn't support static IPs, so we had to put all available IP address from the subnet that will be used for the machines, in the HAproxy backends;
+since we can't predict which IP the machines will have.
 
 Install the role and the dependencies:
 ```bash
