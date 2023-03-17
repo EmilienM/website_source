@@ -94,7 +94,6 @@ So if you're hosting multiple Load-Balancers, your OpenShift control plane traff
 
 Let's deploy it!
 
-In our example, we'll deploy one LB per leaf, which is in its own routed network.
 In this blog post, we won't cover the Failure Domains yet, and will deploy OpenShift within a single Leaf.
 Therefore, we'll deploy only one load balancer.
 
