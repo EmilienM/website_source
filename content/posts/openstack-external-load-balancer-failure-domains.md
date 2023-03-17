@@ -25,7 +25,7 @@ If you haven't read it, please have a look at the [first post](https://my1.fr/bl
 
 Failure Domains help to spread the OpenShift control plane across multiple (at least 3) domains where each domain has a defined storage / network / compute configuration.
 In a modern datacenter, each domain has its own power unit, network and storage fabric, etc. If a domain goes down, it wouldn't have
-an impact on the workloads since the other domains are healthy.
+an impact on the workloads since the other domains are healthy and the services are deployed in HA.
 
 In this context, we think that the SLA of OpenShift can significantly be increased by deploying the OpenShift cluster (control plane and workloads)
 across at least 3 domains.
