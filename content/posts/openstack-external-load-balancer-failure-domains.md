@@ -47,8 +47,6 @@ deployed on CentOS9 (this is what we test).
 In our example, we'll deploy one LB per leaf, which is in its own routed network.
 Therefore, we'll deploy 3 load balancers.
 
-![Example of advanced scenario](/images/example-lb.png)
-
 Let's deploy!
 
 Create your Ansible `inventory.yaml` file:
