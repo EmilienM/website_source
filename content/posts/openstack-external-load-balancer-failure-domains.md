@@ -282,7 +282,7 @@ Note that for each Failure Domain, you have to provide the leaf network ID and i
 If you deploy with availability zones, you'll be able to provide them in each domain. The documentation
 for this feature is in progress and I'll update this post once we have it published.
 
-Also, please note that I'm currently working on a demo and I'll publish the link in this article when it's done.
+If you're interested by a demo, I recorded one [here](https://youtu.be/E1OrMQHt1c4).
 
 ### Known limitations
 
