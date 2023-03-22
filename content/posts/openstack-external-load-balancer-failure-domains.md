@@ -56,14 +56,16 @@ all:
   hosts:
     lb1:
       ansible_host: 192.168.11.2
+      config: lb1
     lb2
       ansible_host: 192.168.12.2
+      config: lb2
     lb3:
       ansible_host: 192.168.13.2
+      config: lb3
   vars:
     ansible_user: cloud-user
     ansible_become: true
-    config: lb
 ```
 
 Create the Ansible `playbook.yaml` file:
@@ -83,12 +85,12 @@ Write the LB configs in Ansible `vars.yaml`:
 ```yaml
 ---
 configs:
-  lb:
+  lb1:
     bgp_asn: 64998
     bgp_neighbors:
       - ip: 192.168.11.1
         password: f00barZ
-    services:
+    services: &services
       - name: api
         vips:
           - 192.168.100.240
@@ -198,6 +200,18 @@ configs:
         backend_opts: "check check-ssl inter 5s fall 2 rise 3 verify none"
         backend_port: 22623
         backend_hosts: *lb_hosts
+  lb2:
+    bgp_asn: 64998
+    bgp_neighbors:
+      - ip: 192.168.12.1
+        password: f00barZ
+    services: &services
+  lb3:
+    bgp_asn: 64998
+    bgp_neighbors:
+      - ip: 192.168.13.1
+        password: f00barZ
+    services: &services
 ```
 
 In this case, we deploy OpenShift on OpenStack which doesn't support static IPs. Therefore, we have to put all the available IPs from the subnets used for the machines, in the HAproxy backends.
