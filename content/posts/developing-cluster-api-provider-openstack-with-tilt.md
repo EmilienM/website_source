@@ -1,6 +1,6 @@
 ---
 title: Developing cluster-api-provider-openstack with Tilt
-date: 2024-01-30
+date: 2024-01-30T00:01:49+00:00
 url: /blog/developing-cluster-api-provider-openstack-with-tilt
 author: Emilien Macchi
 categories:
