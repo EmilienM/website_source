@@ -9,16 +9,16 @@ jobs:
   upload_data:
     runs-on: ubuntu-latest
     steps:
-      - name: Update Git submodules remotely
-        uses: runsascoded/update-submodules@v1
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-
       - name: Git Checkout
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
           submodules: recursive
+
+      - name: Update Git submodules remotely
+        uses: runsascoded/update-submodules@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
