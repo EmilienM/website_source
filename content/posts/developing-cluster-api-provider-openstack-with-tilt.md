@@ -89,10 +89,6 @@ metadata:
 EOF
 ```
 
-#### Prepare CAPO
-
-You need to checkout this [PR](https://github.com/kubernetes-sigs/cluster-api-provider-openstack/pull/1833) for now.
-
 #### Prepare CAPI
 
 You need to create `tilt-settings.yaml` in the CAPI directory.
@@ -107,16 +103,19 @@ enable_providers:
 - openstack
 - kubeadm-bootstrap
 - kubeadm-control-plane
+debug:
+  openstack:
+    port: 31000
 kustomize_substitutions:
   CLUSTER_TOPOLOGY: "true"
   CLUSTER_NAME: "dev"
   OPENSTACK_SSH_KEY_NAME: "emilien"
+  OPENSTACK_BASTION_FLAVOR: "m1.large"
   OPENSTACK_CONTROL_PLANE_MACHINE_FLAVOR: "m1.large"
   OPENSTACK_NODE_MACHINE_FLAVOR: "m1.large"
   OPENSTACK_FAILURE_DOMAIN: "nova"
   OPENSTACK_IMAGE_NAME: "ubuntu-2204-kube-v1.28.5"
-  OPENSTACK_EXTERNAL_NETWORK_ID: "a9a65887-538f-4dfc-8501-284fa83ba749"
-  OPENSTACK_CLOUD: my_cloud
+  OPENSTACK_CLOUD: foch_openshift
   OPENSTACK_DNS_NAMESERVERS: "1.1.1.1"
   NAMESPACE: "default"
   KUBERNETES_VERSION: "v1.28.5"
@@ -125,6 +124,32 @@ template_dirs:
   - ../cluster-api-provider-openstack/templates
 ```
 
+#### Configure Virtual Studio Code
+
+In the CAPO directory, create `.vscode/launch.json`:
+
+```json
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Connect to OpenStack provider",
+            "type": "go",
+            "request": "attach",
+            "mode": "remote",
+            "port": 31000,
+            "host": "127.0.0.1",
+            "showLog": true,
+            "trace": "log",
+        }
+    ]
+}
+```
+
+Make sure you have the [Go extension](https://marketplace.visualstudio.com/items?itemName=golang.Go) installed and
+also you need to install [Delve](https://github.com/go-delve/delve/tree/master/Documentation/installation), a debugger for Go.
+
+After that you can add breakpoints to your code and debug. Have a look at this [guide](https://www.digitalocean.com/community/tutorials/debugging-go-code-with-visual-studio-code) for useful content.
 
 #### Run Tilt!
 
