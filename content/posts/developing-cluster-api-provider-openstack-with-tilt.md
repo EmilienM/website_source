@@ -165,3 +165,5 @@ To deploy a workload cluster, I do it from the UI:
 * in `CAPO.templates`, I create a `development` cluster.
 
 The cluster will now be deployed.
+
+![Tilt in my environment with CAPO](static/images/tilt-capo.png)
