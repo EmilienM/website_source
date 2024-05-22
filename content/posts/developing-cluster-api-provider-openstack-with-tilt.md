@@ -140,7 +140,7 @@ In the CAPO directory, create `.vscode/launch.json`:
             "port": 31000,
             "host": "127.0.0.1",
             "showLog": true,
-            "trace": "log",
+            "trace": "log"
         }
     ]
 }
