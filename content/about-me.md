@@ -1,6 +1,5 @@
 ---
 title: "About me"
-date: "2022-071105"
 hidemeta: true
 comments: false
 showtoc: false
