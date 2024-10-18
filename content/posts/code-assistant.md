@@ -150,7 +150,7 @@ The test wasn't as extended as Copilot suggested and in this case, wasn't workin
 Again the examples were very basic (on purpose) so you can have a slight overview on what to expect.
 Let's say it: comparing Granite 8B with Copilot isn't fair. They aren't the same at all and don't have the same capabilities.
 However, better results could be obtained with Granite if we used 20 or 34 billions parameters.
-For an opens-source model, it's already providing really good results and can help to increase your productivity.
+For an open-source model, it's already providing really good results and can help to increase your productivity.
 
 ### Conclusion
 
