@@ -80,12 +80,12 @@ params:
     Title: "Hi there \U0001F44B"
     Content: I'm Emilien and I work as a software developer at Red Hat, focusing on OpenStack and OpenShift. I sometimes post about things that I'm working on.
 
-  social:
-    - icon: github
-      icon_pack: "fab"
+  socialIcons:
+    - name: twitter
+      url: "https://twitter.com/EmilienMacchi"
+    - name: github
       url: "https://github.com/EmilienM"
-    - icon: linkedin
-      icon_pack: "fab"
+    - name: linkedin
       url: "https://www.linkedin.com/in/emilienmacchi"
 
   analytics:
