@@ -46,11 +46,11 @@ params:
   disqusShortname: emilienmacchi
   comments: true
 
-  # not working yet
-  #socialIcons:
-  #  - name: github
-  #    title: Github
-  #    url: "https://github.com/EmilienM"
+  social: true
+  socialIcons:
+    - name: github
+      title: Github
+      url: "https://github.com/EmilienM"
 
   assets:
     # disableHLJS: true # to disable highlight.js
