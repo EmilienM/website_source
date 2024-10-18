@@ -15,7 +15,7 @@ By providing contextual code suggestions and reducing repetitive tasks, these to
 can significantly increase productivity.
 In this post, we'll explore how AI-assisted coding works, its benefits, potential challenges,
 and tips for using it effectively in your development workflow. I'll also share
-example with two solutions and compare them so it'll help you to make decisions on what tools
+examples with two solutions and compare them so it'll help you to make decisions on what tools
 to use.
 
 <!--more-->
