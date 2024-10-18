@@ -51,6 +51,9 @@ params:
     - name: github
       title: Github
       url: "https://github.com/EmilienM"
+    - name: linkedin
+      title: Linkedin
+      url: "https://www.linkedin.com/in/emilienmacchi"
 
   assets:
     # disableHLJS: true # to disable highlight.js
