@@ -27,7 +27,7 @@ which integrate seamlessly with popular code editors. These tools use natural la
 to provide real-time code suggestions as you write. Some of these tools also provide a chatbot which can help to explain
 some code or even generate it for you based on the questions.
 
-Coding Assistants work analyze the code context and provide auto-suggestions, complete code snippets, or even entire functions.
+Coding Assistants analyze the code context and provide auto-suggestions, complete code snippets, or even entire functions.
 By learning from repositories (public and/or private), these assistants understand programming patterns and offer relevant solutions.
 
 ### Benefits of Using AI Coding Assistants
@@ -36,8 +36,8 @@ AI coding assistants can have a huge positive impact on the software development
 
 - Increased productivity: by suggesting common code snippets, functions, and boilerplate code, AI tools can speed up the development process.
   You spend less time on repetitive tasks and more time solving complex problems.
-- Reduced syntax errors: combined with powerful code editors, AI suggestions can minimize syntax errors by offering code that adheres
-  to best practices and standards.
+- Reduced syntax errors: AI suggestions can minimize syntax errors by offering code that adheres
+  to best practices and standards. Note that generated syntax is not always right, which is why results are better with a powerful code editor.
 - Learning opportunity: developers can learn new APIs, frameworks, and approaches by exploring the suggestions provided by the AI assistant.
 - Enhanced focus: instead of switching between the IDE and browser for documentation or Stack Overflow answers, developers can stay focused
   on the code, with instant context-aware help.
