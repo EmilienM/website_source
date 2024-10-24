@@ -20,6 +20,13 @@ to use.
 
 <!--more-->
 
+### Important Disclaimer
+
+The usage of coding assistants is often restricting by company policies.
+As a Red Hat employee, I am not allowed to leverage AI to contribute to our products and I want
+to make clear that this article is for information sharing only.
+My experiments are only on personal projects and the thoughts shared in this article are only my own.
+
 ### The Rise of AI-Assisted Coding
 
 In recent years, machine learning models trained on vast amounts of code have evolved into free or commercial tools,
