@@ -24,7 +24,7 @@ to use.
 
 The usage of coding assistants is often restricting by company policies.
 As a Red Hat employee, I am not allowed to leverage AI to contribute to our products and I want
-to make clear that this article is for information sharing only.
+to be clear that this article is for information sharing only and doesn't reflect how products are built.
 My experiments are only on personal projects and the thoughts shared in this article are only my own.
 
 ### The Rise of AI-Assisted Coding
