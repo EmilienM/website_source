@@ -2,7 +2,6 @@ baseURL: https://my1.fr
 languageCode: en-us
 title: /home/emilien
 theme: PaperMod
-paginate: 5
 
 enableRobotsTXT: true
 buildDrafts: false
@@ -14,6 +13,9 @@ buildExpired: false
 minify:
   disableXML: true
   minifyOutput: true
+
+pagination:
+  pagerSize: 5
 
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
