@@ -89,7 +89,7 @@ params:
   # home-info mode
   homeInfoParams:
     Title: "Hi there \U0001F44B"
-    Content: I'm Emilien and I work as a software developer at Red Hat, focusing on OpenStack and OpenShift. I sometimes post about things that I'm working on.
+    Content: I'm Emilien and I work as a software developer at Red Hat, currently focusing on productizing AI products. I previously worked on OpenStack and OpenShift. I sometimes post about things that I'm working on.
 
   analytics:
     google:
